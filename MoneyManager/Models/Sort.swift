@@ -19,7 +19,7 @@ extension SortOrder: Identifiable {
 }
 
 
-struct ExpenseLogSort {
+struct TransactionSort {
     var sortType: SortType
     var sortOrder: SortOrder
     
@@ -30,8 +30,10 @@ struct ExpenseLogSort {
     var sortDescriptor: NSSortDescriptor {
         switch sortType {
         case .date:
+            // TODO implement date sort
             fatalError()
         case .amount:
+            // TODO implement amount sort
             fatalError()
         }
     }

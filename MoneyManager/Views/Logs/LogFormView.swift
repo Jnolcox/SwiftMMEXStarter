@@ -3,34 +3,34 @@ import CoreData
 
 struct LogFormView: View {
         
-    @State var name: String = ""
+    @State var payee: String = ""
     @State var amount: Double = 0
-    @State var category: Category = .utilities
+    @State var category: Category = .food
     @State var date: Date = Date()
     
     @Environment(\.presentationMode)
     var presentationMode
     
     var title: String {
-        "Create Expense Log"
+        "New Transaction"
     }
     
     var body: some View {
         NavigationView {
             Form {
-                TextField("Name", text: $name)
-                    .disableAutocorrection(true)
-                TextField("Amount", value: $amount, formatter: Utils.numberFormatter)
-                    .keyboardType(.numbersAndPunctuation)
+                    TextField("Payee", text: $payee)
+                        .disableAutocorrection(true)
+                    TextField("Amount", value: $amount, formatter: Utils.numberFormatter)
+                        .keyboardType(.numbersAndPunctuation)
                     
-                Picker(selection: $category, label: Text("Category")) {
-                    ForEach(Category.allCases) { category in
-                        Text(category.rawValue.capitalized).tag(category)
+                    Picker(selection: $category, label: Text("Category")) {
+                        ForEach(Category.allCases) { category in
+                            Text(category.rawValue.capitalized).tag(category)
+                        }
                     }
-                }
-                DatePicker(selection: $date, displayedComponents: .date) {
-                    Text("Date")
-                }
+                    DatePicker(selection: $date, displayedComponents: .date) {
+                        Text("Date")
+                    }
             }
 
             .navigationBarItems(

@@ -3,10 +3,11 @@ import CoreData
 
 struct LogListView: View {
 
-    // TODO: - Implement Fetch of Expense Log to display in a List
+    // TODO: - Implement Fetch of Transactions to display in a list
     var body: some View {
         List {
-            Text("Buy Groceries")
+            Text("Groceries - $400.62")
+            Text("Rent - $3,750")
         }
     }
     

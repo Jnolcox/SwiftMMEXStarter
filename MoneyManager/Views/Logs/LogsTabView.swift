@@ -17,9 +17,10 @@ struct LogsTabView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                SearchBar(text: $searchText, keyboardHeight: $searchBarHeight, placeholder: "Search expenses")
-                FilterCategoriesView(selectedCategories: $selectedCategories)
-                Divider()
+                SearchBar(text: $searchText, keyboardHeight: $searchBarHeight, placeholder: "Search")
+                // Uncomment to add the categories as a filter
+                // FilterCategoriesView(selectedCategories: $selectedCategories)
+                // Divider()
                 SelectSortOrderView(sortType: $sortType, sortOrder: $sortOrder)
                 Divider()
                 LogListView()
@@ -29,7 +30,7 @@ struct LogsTabView: View {
                 LogFormView()
             }
             .navigationBarItems(trailing: Button(action: addTapped) { Text("Add") })
-            .navigationBarTitle("Expense Logs", displayMode: .inline)
+            .navigationBarTitle("Transactions", displayMode: .inline)
         }
     }
     

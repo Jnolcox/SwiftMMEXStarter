@@ -10,6 +10,7 @@ enum Category: String, CaseIterable {
     case shopping
     case transportation
     case utilities
+    case homeneeds
     case other
     
     var systemNameIcon: String {
@@ -21,6 +22,7 @@ enum Category: String, CaseIterable {
         case .shopping: return "cart"
         case .transportation: return "car"
         case .utilities: return "bolt"
+        case .homeneeds: return "home"
         case .other: return "tag"
         }
     }
@@ -34,6 +36,7 @@ enum Category: String, CaseIterable {
         case .shopping: return Color(#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1))
         case .transportation: return Color(#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1))
         case .utilities: return Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1))
+        case .homeneeds: return Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
         case .other: return Color(#colorLiteral(red: 0.5791940689, green: 0.1280144453, blue: 0.5726861358, alpha: 1))
         }
     }

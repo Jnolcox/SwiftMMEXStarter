@@ -43,7 +43,7 @@ struct DashboardTabView: View {
             }
             
             if totalExpenses == nil && categoriesSum == nil {
-                Text("No expenses data\nPlease add your expenses from the logs tab")
+                Text("No Transactions\nPlease Add Data In The Logs Tab")
                     .multilineTextAlignment(.center)
                     .font(.headline)
                     .padding(.horizontal)
@@ -60,14 +60,12 @@ struct DashboardTabView: View {
     }
 }
 
-
 struct CategorySum: Identifiable, Equatable {
     let sum: Double
     let category: Category
     
     var id: String { "\(category)\(sum)" }
 }
-
 
 struct DashboardTabView_Previews: PreviewProvider {
     static var previews: some View {

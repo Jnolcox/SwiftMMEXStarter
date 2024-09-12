@@ -15,7 +15,7 @@ struct ContentView: View {
             LogsTabView()
                 .tabItem {
                     VStack {
-                        Text("Logs")
+                        Text("Transactions")
                         Image(systemName: "tray")
                     }
             }
